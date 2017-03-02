@@ -1,0 +1,17 @@
+<h1>SONGS</h1>
+
+<h2 style="color:pink">You have searched: <%= params[:search] %> </h2>
+
+<div>
+  <% @album_array.each do |album| %>
+    <img src= "<%= album[:artworkUrl100]%>" height="200" width="200">
+    <p>Album Name: <%= album[:collectionName] %></p>
+    <p>Artist Name: <%= album[:artistName] %></p>
+    <p>Genre: <%= album[:primaryGenreName] %></p>
+    <p>Release Date: <%= album[:releaseDate] %></p>
+    <p>Songs: </p>
+    <% album[:songs].each do |song| %>
+      <p><%= song["trackName"]%></p>
+    <% end %>
+  <% end %>
+</div>

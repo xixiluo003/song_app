@@ -1,0 +1,10 @@
+<h1>MOVIES</h1>
+
+<h2 style="color:pink">You have searched: <%= params[:search] %> </h2>
+
+<div class="moviepage">
+  <% @movie_array.each do |movie| %>
+    <img src= "<%= movie["artworkUrl100"] %>" height="150" width="150">
+    <p>Movie Name: <%= movie["trackName"] %></p>
+  <% end %>
+</div>

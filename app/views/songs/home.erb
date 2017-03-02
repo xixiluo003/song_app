@@ -1,0 +1,12 @@
+<h1>Home</h1>
+
+<%= form_tag("/searchsong", :method => "get", class: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Songs" %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+
+<%= form_tag("/searchmovie", :method => "get", class: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Movies" %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
